@@ -1,9 +1,9 @@
 resource "aws_instance" "name" {
-  ami               = "ami-0ddfba243cbee3768"
-  instance_type     = "t2.micro"
-  key_name          = "my-keypair"
-  availability_zone = "ap-south-1a"
-  #vpc_security_group_ids = ["sg-05dc17f8ea75a20e2"]
+  ami               = ""
+  instance_type     = ""
+  key_name          = ""
+  availability_zone = ""
+  #vpc_security_group_ids = [""]
   tags = {
     Name = "state-remote-backend"
   }
@@ -12,9 +12,9 @@ resource "aws_instance" "name" {
 
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-backeend-15-2"
+    bucket         = ""
     key            = "terraform.tfstate"
-    region         = "ap-south-1"
+    region         = ""
     dynamodb_table = "terraform_state"
   }
 }
